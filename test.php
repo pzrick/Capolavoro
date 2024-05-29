@@ -9,7 +9,7 @@
 
     while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
         echo "Nome: ".$row['nome']."<br>";
-        echo "Titolo: ".$row['titolo']." ";
+        echo "Titolo: ".$row['titolo']."<br>";
         echo "Paragrafo: ".$row['paragrafo']."<br>";
         echo "Data: ".$row['data_ricordo']."<br>";
         echo "Ora: ".$row['tempo_ricordo']."<br>";
