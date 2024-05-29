@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Foldit:wght@300;400;500;600&family=Lora:ital,wght@0,500;1,400&family=Playpen+Sans:wght@600;700;800&family=Reem+Kufi+Ink&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+body{
+  min-height: 100vh;
+}
+
+header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 100px;
+  background: transparent;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.logo{
+  font-size: 2rem;
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.navbar a{
+  position: relative;
+  font-size: 1.5rem;
+  color: white;
+  font-weight: 500;
+  text-decoration: none;
+  margin-left: 50px;
+}
+
+.navbar a::before{
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: white;
+  transition: 0.3s ease;
+}
+
+.navbar a:hover::before{
+  width: 100%;
+}
+
+.container {
+  background-color: rgb(0,0,0,0.85);
+  margin-left: 5%;
+  margin-right: 5%;
+  padding: 3rem;
+  margin-top: 6%;
+  position: relative;
+  z-index: 1;
+  border-radius: 20px;
+}
+
+main{
+  margin-left: 12rem;
+  margin-right: 6rem;
+}
+
+p{
+  color:white;
+  padding-bottom: 3.5rem;
+}
+
+.foto-nao img{
+    display: flex;
+    align-items: center
+}
+
+.foto-nao img{
+    height: 100%;
+    width: 65%;
+    margin-bottom: 5%;
+}
+
+.videoInsert {
+  position: absolute; 
+  right: 0; 
+  bottom: 0;
+  min-width: 25%; 
+  min-height: 25%;
+  width: auto; 
+  height: auto; 
+  z-index: -100;
+  background-size: cover;
+  overflow: hidden;
+}
