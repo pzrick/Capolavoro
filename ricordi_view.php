@@ -42,13 +42,13 @@
             <?php
                 if(!$risultato){
                     ?>
-                    <h1>ERRORE: query fallita.</h1>
+                    <h1 style="color: white;">ERRORE: query fallita.</h1>
                     <?php
                     exit();
                 }
                 else{
                     ?>
-                    <h1>Query eseguita con successo!</h1>
+                    <h1 style="color: white;">Query eseguita con successo!</h1>
                     <?php
                 }?>
 
