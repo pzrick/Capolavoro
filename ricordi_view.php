@@ -28,6 +28,7 @@
             <a href="laboratori.html">Laboratori</a>
             <a href="nao.html">Robotica umanoide (NAO)</a>
             <a href="qorario.html">Quadro orario</a>
+            <a href="ricordi.php">Ricordi</a>
         </nav>
     </header>
 
