@@ -134,3 +134,21 @@ p{
 .slider-nav a:hover {
 	opacity: 1;
 }
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 10px;
+}
+
+button {
+  padding: 10px;
+  background-color: grey;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}

@@ -37,6 +37,7 @@
             <a href="laboratori.html">Laboratori</a>
             <a href="nao.html">Robotica umanoide (NAO)</a>
             <a href="qorario.html">Quadro orario</a>
+            <a href="ricordi.php">Ricordi</a>
         </nav>
     </header>
 
@@ -46,29 +47,33 @@
     <main>
         <div class="container">
             <div id="ricordi-titolo">
-                <h1 style="color: white;">Ricordi</h1>
-                <p>
+                <h1 style="color: white; margin-left:25px">Ricordi</h1>
+                <p style="margin-left: 25px">
                     Lascia un ricordo indelebile su questa pagina, col tuo nome o in completo anonimato!
+                    Tieni a mente che tutto ciò che scrivi sarà pubblico, per tanto sii cordiale, rispettoso ed educato/a.
                 </p>
                 <?php
                     if($rowcount == 0){
                         ?>
-                        <h1>Ops! Quanto spazio...</h1>
-                        <p>A quanto pare non c'è ancora alcun ricordo, lasciane uno <a href="ricordi_form_post.html">qui.</a></p>
+                        <center>
+                        <h1 style="color:white; margin-left: 25px">Ops! Quanto spazio...</h1>
+                        <p style="margin-left: 25px" >A quanto pare non c'è ancora alcun ricordo, lasciane uno <a href="ricordi_form_post.html">qui.</a></p>
+                        </center>
                     <?php
                     }
 
                     else{
                         ?>
                         <div class="bottone">
-                    <a href="ricordi_view.php?id=<?php echo rand($id_min, $id_max);?>">Ricordo casuale</a>
-                    <a href="ricordi_form_post.html">Lascia un ricordo</a>
+                        <strong><a href="ricordi_view.php?id=<?php echo rand($id_min, $id_max);?>" style="color:white">Ricordo casuale</a></strong>
+                        <strong><a href="ricordi_form_post.html" style="color:white">Lascia un ricordo</a></strong>
+                        
                 </div>
             </div>
 
             <div id="ricordi">
                 <table class="table table-bordered">
-                    <tr class="bg-dark text-white">
+                    <tr class="bg-dark text-white" style="bgcolor:black;">
                         <td> Nome </td>
                         <td> Titolo </td>
                         <td> Paragrafo </td>

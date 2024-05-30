@@ -35,13 +35,16 @@
             </div>
 
             <div class="form-container">
-                <form action="ricordi_post.php" method="POST">
-                    <br>Nome (max. 20 caratteri): <input type="text" name="nome" placeholder="Anonimo" maxlength="20">
-                    <br>Titolo (max. 40 caratteri): <input type="text" name="titolo" required maxlength="40">
-                    <br>Paragrafo (max. 500 caratteri)<br><input type="text-area" name="paragrafo" required maxlength="500">
-                    <br><br><input type="submit"> <input type="reset">
+                <form action="ricordi_post.php" method="POST" style="margin-left:25px;">
+                    <strong><label for="nome" style="color: white;margin-right: 5px;">Nome (max. 20 caratteri):</label></strong>
+                    <input type="text" name="nome" placeholder="Anonimo" maxlength="20" style="margin-right: 980px;"><br>
+                    <strong><label for="titolo" style="color: white; margin-right: 5px;">Titolo (max. 40 caratteri):</label></strong>
+                    <input type="text" name="titolo" required maxlength="40" style="margin-right: 980px;"><br>
+                    <strong><label for="paragrafo" style="color: white; margin-right: 5px;">Paragrafo (max. 500 caratteri):</label></strong>
+                    <input type="text-area" name="paragrafo" required maxlength="500" style="margin-right: 980px;"><br>
+                    <button type="submit" style="margin-left: 500px; margin-right: 500px; margin-bottom: 5px;">Invia</button>
+                    <button type="reset" style="margin-left: 500px; margin-right: 500px;">Cancella</button>
                 </form>
-
             </div>
         </div>
     </main>
