@@ -3,7 +3,13 @@
 
     echo"<br><br>";
 
-    $nome = $_POST['nome'];
+    if($_POST['nome']==""){
+        $nome = "anonimo";
+    }
+    else{
+        $nome = $_POST['nome'];
+    }
+    
     $titolo = $_POST['titolo'];
     $paragrafo = $_POST['paragrafo'];
     $data = date("Y/m/d");
