@@ -45,8 +45,10 @@
                         <td> Nome </td>
                         <td> Titolo </td>
                         <td> Paragrafo </td>
-                        <td> Data pubblicazione</td>
-                        <td> Ora pubblicazione</td>
+                        <td> Data pubblicazione </td>
+                        <td> Ora pubblicazione </td>
+                        <td> ID ricordo </td>
+                        <td></td>
                     </tr>
                     <tr>
                         <?php
@@ -57,6 +59,8 @@
                             <td> <?php echo $row['paragrafo'];?></td>
                             <td> <?php echo $row['data_ricordo'];?></td>
                             <td> <?php echo $row['tempo_ricordo'];?></td>
+                            <td> <?php echo $row['id_ricordo'];?></td>
+                            <td><form action="ricordi_view.php" method="POST"><input type="button" value="Visualizza"></form></td>
                     </tr>
                     <?php
                     
