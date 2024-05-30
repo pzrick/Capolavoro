@@ -77,3 +77,10 @@ p{
   color:white;
   padding-bottom: 3.5rem;
 }
+
+.container-panoramica {
+  display: grid;
+  align-items: center; 
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 5px;
+ }
