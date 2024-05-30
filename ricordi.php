@@ -43,9 +43,6 @@
     
     <main>
         <div class="container">
-            <?php echo $id_min;?>
-            <?php echo $id_max;?>
-            <?php echo rand($id_min, $id_max);?>
             <div id="ricordi-titolo">
                 <h1 style="color: white;">Ricordi</h1>
                 <p>
