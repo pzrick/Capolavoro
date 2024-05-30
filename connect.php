@@ -10,6 +10,4 @@
         die("Connessione fallita.");
         exit();
     }
-
-    echo "Connessione riuscita.";
 ?>
