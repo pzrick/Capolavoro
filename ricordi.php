@@ -3,6 +3,14 @@
 
     $query = "SELECT * FROM ricordi ORDER BY data_ricordo DESC, tempo_ricordo DESC;";
     $result = mysqli_query($connection, $query);
+    
+    $id_min_result = mysqli_query($connection, "SELECT id_ricordo FROM ricordi ORDER BY id_ricordo ASC LIMIT 1;");
+    $id_min_row = $id_min_result->fetch_assoc();
+    $id_min = (int) $id_min_row['id_ricordo'];
+
+    $id_max_result = mysqli_query($connection, "SELECT id_ricordo FROM ricordi ORDER BY id_ricordo DESC LIMIT 1;");
+    $id_max_row = $id_max_result -> fetch_assoc();
+    $id_max = $id_max_row['id_ricordo'];
 
     $rowcount = mysqli_num_rows($result);
 ?>
@@ -35,6 +43,9 @@
     
     <main>
         <div class="container">
+            <?php echo $id_min;?>
+            <?php echo $id_max;?>
+            <?php echo rand($id_min, $id_max);?>
             <div id="ricordi-titolo">
                 <h1 style="color: white;">Ricordi</h1>
                 <p>
@@ -51,7 +62,7 @@
                     else{
                         ?>
                         <div class="bottone">
-                    <a href="ricordi_view.php?id=<?php echo rand(1,$rowcount)?>">Ricordo casuale</a>
+                    <a href="ricordi_view.php?id=<?php echo rand($id_min, $id_max);?>">Ricordo casuale</a>
                     <a href="ricordi_form_post.html">Lascia un ricordo</a>
                 </div>
             </div>
@@ -77,7 +88,7 @@
                             <td> <?php echo $row['data_ricordo'];?></td>
                             <td> <?php echo $row['tempo_ricordo'];?></td>
                             <td> <?php echo $row['id_ricordo'];?></td>
-                            <td><a href="ricordi_view.php?id=<?php echo"$row[id_ricordo]"?>">Visualizza</a></td>
+                            <td><a href="ricordi_view.php?id=<?php echo $row['id_ricordo']?>">Visualizza</a></td>
                     </tr>
                     <?php
                     
