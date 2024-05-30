@@ -1,7 +1,7 @@
 <?php
     include("connect.php");
 
-    $query = "SELECT * FROM `ricordi`;";
+    $query = "SELECT * FROM ricordi ORDER BY data_ricordo DESC, tempo_ricordo DESC;";
     $result = mysqli_query($connection, $query);
 
     $rowcount = mysqli_num_rows($result);
