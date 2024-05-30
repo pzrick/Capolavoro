@@ -42,6 +42,7 @@
                 </p>
                 <div class="bottone">
                     <a href="ricordi_view.php?id=<?php echo rand(1,$rowcount)?>">Ricordo casuale</a>
+                    <a href="ricordi_form_post.html">Lascia un ricordo</a>
                 </div>
             </div>
 
