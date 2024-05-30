@@ -1,7 +1,10 @@
 <?php
     include("connect.php");
+
     $query = "SELECT * FROM `ricordi`;";
     $result = mysqli_query($connection, $query);
+
+    $rowcount = mysqli_num_rows($result);
 ?>
 
 <!DOCTYPE html>
@@ -37,6 +40,9 @@
                 <p>
                     Lascia un ricordo indelebile su questa pagina, col tuo nome o in completo anonimato!
                 </p>
+                <div class="bottone">
+                    <a href="ricordi_view.php?id=<?php echo rand(1,$rowcount)?>">Ricordo casuale</a>
+                </div>
             </div>
 
             <div id="ricordi">
