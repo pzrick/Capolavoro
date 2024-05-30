@@ -3,16 +3,18 @@
 
     $query = "SELECT * FROM ricordi ORDER BY data_ricordo DESC, tempo_ricordo DESC;";
     $result = mysqli_query($connection, $query);
-    
-    $id_min_result = mysqli_query($connection, "SELECT id_ricordo FROM ricordi ORDER BY id_ricordo ASC LIMIT 1;");
-    $id_min_row = $id_min_result->fetch_assoc();
-    $id_min = (int) $id_min_row['id_ricordo'];
-
-    $id_max_result = mysqli_query($connection, "SELECT id_ricordo FROM ricordi ORDER BY id_ricordo DESC LIMIT 1;");
-    $id_max_row = $id_max_result -> fetch_assoc();
-    $id_max = $id_max_row['id_ricordo'];
 
     $rowcount = mysqli_num_rows($result);
+
+    if($rowcount > 0){
+        $id_min_result = mysqli_query($connection, "SELECT id_ricordo FROM ricordi ORDER BY id_ricordo ASC LIMIT 1;");
+        $id_min_row = $id_min_result->fetch_assoc();
+        $id_min = (int) $id_min_row['id_ricordo'];
+
+        $id_max_result = mysqli_query($connection, "SELECT id_ricordo FROM ricordi ORDER BY id_ricordo DESC LIMIT 1;");
+        $id_max_row = $id_max_result -> fetch_assoc();
+        $id_max = $id_max_row['id_ricordo'];
+    }
 ?>
 
 <!DOCTYPE html>
