@@ -1,8 +1,11 @@
 <?php
     include("connect.php");
 
+    $_POST  = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
+
+
     if($_POST['nome']==""){
-        $nome = "anonimo";
+        $nome = "Anonimo";
     }
     else{
         $nome = $_POST['nome'];

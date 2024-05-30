@@ -1,6 +1,8 @@
 <?php
     include("connect.php");
 
+    $_GET   = filter_input_array(INPUT_GET, FILTER_SANITIZE_STRING);
+
     $id = $_GET['id'];
 
     $query = "SELECT * FROM `ricordi` WHERE id_ricordo=$id;";
