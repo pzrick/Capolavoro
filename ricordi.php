@@ -40,7 +40,17 @@
                 <p>
                     Lascia un ricordo indelebile su questa pagina, col tuo nome o in completo anonimato!
                 </p>
-                <div class="bottone">
+                <?php
+                    if($rowcount == 0){
+                        ?>
+                        <h1>Ops! Quanto spazio...</h1>
+                        <p>A quanto pare non c'è ancora alcun ricordo, lasciane uno <a href="ricordi_form_post.html">qui.</a></p>
+                    <?php
+                    }
+
+                    else{
+                        ?>
+                        <div class="bottone">
                     <a href="ricordi_view.php?id=<?php echo rand(1,$rowcount)?>">Ricordo casuale</a>
                     <a href="ricordi_form_post.html">Lascia un ricordo</a>
                 </div>
@@ -76,6 +86,10 @@
                     ?>
                 </table>
             </div>
+            <?php
+                    }
+                ?>
+                
         </div>
     </main>
 </body>
