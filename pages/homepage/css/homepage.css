@@ -84,3 +84,30 @@ p{
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 5px;
  }
+
+ ol { padding-left: 50px; }
+ li { 
+   color: #4F4F4F; 
+   padding-left: 16px;
+   margin-top: 24px;
+   position: relative;
+   font-size: 16px;
+   line-height: 20px;
+   
+   &:before {
+     content: '';
+     display: block;
+     height: 42px;
+     width: 42px;
+     border-radius: 50%;
+     border: 2px solid #ddd;
+     position: absolute;
+     top: -12px;
+     left: -46px;
+   }
+ }
+
+ ol.alternating-colors { 
+  li:nth-child(odd):before { border-color: #0BAD02; }
+  li:nth-child(even):before { border-color: #2378D5; }
+}
