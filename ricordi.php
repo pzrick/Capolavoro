@@ -59,7 +59,6 @@
                         <div class="bottone">
                         <strong><a href="ricordi_view.php?id=<?php echo rand($id_min, $id_max);?>" style="color:white">Ricordo casuale</a></strong>
                         <strong><a href="ricordi_form_post.html" style="color:white">Lascia un ricordo</a></strong>
-                        
                 </div>
             </div>
             <div id="ricordi">
