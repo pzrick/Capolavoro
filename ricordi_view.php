@@ -32,11 +32,7 @@
             <a href="qorario.html">Quadro orario</a>
             <a href="ricordi.php">Ricordi</a>
         </nav>
-    </header>
-
-
-
-    
+    </header>   
     <main>
         <div class="container">
             <?php
@@ -45,13 +41,11 @@
                     <h1 style="color: white;">ERRORE: query fallita.</h1>
                     <?php
                     exit();
-                }
-                else{
+                }else{
                     ?>
                     <h1 style="color: white;">Query eseguita con successo!</h1>
                     <?php
                 }?>
-
             <div class="view-data">
             <table class="table table-bordered">
                     <tr class="bg-dark text-white">
@@ -74,9 +68,7 @@
                             <td> <?php echo $row['id_ricordo'];?></td>
                     </tr>
                     <?php
-                    
-                    }
-                    
+                    } 
                     ?>
                 </table>
             </div>            

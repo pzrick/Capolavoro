@@ -16,7 +16,6 @@
         $id_max = $id_max_row['id_ricordo'];
     }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,13 +24,11 @@
     <link rel="stylesheet" href="pages/ricordi/css/ricordi.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-
     <title>💭Ricordi</title>
 </head>
 <body style="background-color: #000a0c;">
     <header>
         <a href="#" class="logo">IISS E. Majorana Termoli</a>
-
         <nav class="navbar">
             <a href="homepage.html">Home</a>
             <a href="laboratori.html">Laboratori</a>
@@ -40,10 +37,6 @@
             <a href="ricordi.php">Ricordi</a>
         </nav>
     </header>
-
-
-
-    
     <main>
         <div class="container">
             <div id="ricordi-titolo">
@@ -61,7 +54,6 @@
                         </center>
                     <?php
                     }
-
                     else{
                         ?>
                         <div class="bottone">
@@ -70,7 +62,6 @@
                         
                 </div>
             </div>
-
             <div id="ricordi">
                 <table class="table table-bordered">
                     <tr class="bg-dark text-white" style="bgcolor:black;">
@@ -95,9 +86,7 @@
                             <td><a href="ricordi_view.php?id=<?php echo $row['id_ricordo']?>">Visualizza</a></td>
                     </tr>
                     <?php
-                    
-                    }
-                    
+                    }  
                     ?>
                 </table>
             </div>
